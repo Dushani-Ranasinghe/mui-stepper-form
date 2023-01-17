@@ -1,28 +1,219 @@
-import React from "react";
-import { Button } from "@mui/material";
-import styled from "styled-components";
+import { Select, InputLabel, MenuItem } from "@mui/material";
+import React, { useState } from "react";
+import Grid from "@mui/material/Grid";
+import TextField from "@mui/material/TextField";
 
+const inputstyle = {
+  color: "white",
+  fontFamily: "Omnes",
+  fontStyle: "normal",
+  fontSize: "14px",
+};
+const textFieldStyle = {
+  "& .MuiOutlinedInput-notchedOutline": {
+    border: "2px solid rgba(255, 255, 255, 0.5)",
+    borderRadius: "11px",
+    height: "40px",
+    margin: "none",
+    padding: "none",
+    textAlign: "center",
+    "&:hover": {
+      borderColor: "rgba(255, 255, 255, 0.5)",
+      margin: "none",
+      padding: "none",
+    },
+  },
+  "& .MuiOutlinedInput-input": {
+    padding: "0px 10px",
+    height: "40px",
+    color: "white",
+  },
+};
 export default function Test() {
+  const [gender, setGender] = useState("");
+
+  const handleChange = (event) => {
+    setGender(event.target.value);
+  };
+
   return (
-    <TestWrapper>
-      Test
-      <Button variant="outlined" className="TestBtn">
-        Test button
-      </Button>
-    </TestWrapper>
+    <Grid container spacing={2}>
+      <Grid item xs={12} sm={5}>
+        <InputLabel sx={inputstyle}>Pet Name</InputLabel>
+        <TextField
+          id="firstName"
+          name="firstName"
+          label=""
+          autoComplete="off"
+          variant="outlined"
+          sx={textFieldStyle}
+        />
+      </Grid>
+      <Grid item xs={12} sm={5}>
+        <InputLabel sx={inputstyle}>Street Address</InputLabel>
+        <TextField
+          id="firstName"
+          name="firstName"
+          label=""
+          autoComplete="off"
+          variant="outlined"
+          sx={textFieldStyle}
+        />
+      </Grid>
+      <Grid item xs={12} sm={5}>
+        <InputLabel sx={inputstyle}>Family Name</InputLabel>
+        <TextField
+          id="firstName"
+          name="firstName"
+          label=""
+          autoComplete="off"
+          variant="outlined"
+          sx={textFieldStyle}
+        />
+      </Grid>
+      <Grid item xs={12} sm={5}>
+        <InputLabel sx={inputstyle}>AptCity</InputLabel>
+        <TextField
+          id="firstName"
+          name="firstName"
+          label=""
+          autoComplete="off"
+          variant="outlined"
+          sx={textFieldStyle}
+        />
+      </Grid>
+      <Grid item xs={12} sm={5}>
+        <InputLabel sx={inputstyle}>Date of Birth</InputLabel>
+        <TextField
+          id="firstName"
+          name="firstName"
+          label=""
+          autoComplete="off"
+          variant="outlined"
+          type="date"
+          sx={textFieldStyle}
+        />
+      </Grid>
+      <Grid item xs={12} sm={5}>
+        <InputLabel sx={inputstyle}>State</InputLabel>
+        <TextField
+          id="firstName"
+          name="firstName"
+          label=""
+          autoComplete="off"
+          variant="outlined"
+          sx={textFieldStyle}
+        />
+      </Grid>
+      <Grid item xs={12} sm={5}>
+        <InputLabel sx={inputstyle}>Breed</InputLabel>
+        <TextField
+          id="firstName"
+          name="firstName"
+          label=""
+          autoComplete="off"
+          variant="outlined"
+          sx={textFieldStyle}
+        />
+      </Grid>
+      <Grid item xs={12} sm={5}>
+        <InputLabel sx={inputstyle}>Zip Code</InputLabel>
+        <TextField
+          id="firstName"
+          name="firstName"
+          label=""
+          autoComplete="off"
+          variant="outlined"
+          sx={textFieldStyle}
+        />
+      </Grid>
+      <Grid item xs={12} sm={5}>
+        <InputLabel sx={inputstyle}>Weight</InputLabel>
+        <TextField
+          id="firstName"
+          name="firstName"
+          label=""
+          autoComplete="off"
+          variant="outlined"
+          sx={textFieldStyle}
+        />
+      </Grid>
+      <Grid item xs={12} sm={5}>
+        <InputLabel sx={inputstyle}>Gender</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={gender}
+          label="Gender"
+          onChange={handleChange}
+          displayEmpty
+          sx={{
+            width: 200,
+            height: 50,
+            "& .MuiOutlinedInput-notchedOutline": {
+              border: "2px solid rgba(255, 255, 255, 0.5)",
+              borderRadius: "11px",
+              height: "40px",
+            },
+            "& .MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary ":
+              {
+                height: "40px",
+              },
+            "& .MuiSelect-select": {
+              padding: "0px 10px",
+              height: "40px",
+              color: "white",
+            },
+          }}
+        >
+          <MenuItem value={1}>Male</MenuItem>
+          <MenuItem value={2}>Female</MenuItem>
+        </Select>
+      </Grid>
+      <Grid item xs={12} sm={5}>
+        <InputLabel sx={inputstyle}>Country</InputLabel>
+        <TextField
+          id="firstName"
+          name="firstName"
+          label=""
+          autoComplete="off"
+          variant="outlined"
+          sx={textFieldStyle}
+        />
+      </Grid>
+      <Grid item xs={12} sm={5}>
+        <InputLabel sx={inputstyle}>Fur Color</InputLabel>
+        <TextField
+          id="firstName"
+          name="firstName"
+          label=""
+          autoComplete="off"
+          variant="outlined"
+          sx={textFieldStyle}
+        />
+      </Grid>
+      <Grid item xs={12} sm={5}>
+        <InputLabel sx={inputstyle}>Eye Color</InputLabel>
+        <TextField
+          id="firstName"
+          name="firstName"
+          label=""
+          autoComplete="off"
+          variant="outlined"
+          sx={textFieldStyle}
+        />
+      </Grid>
+      <Grid item xs={12} sm={5}>
+        <InputLabel sx={inputstyle}>Marks</InputLabel>
+        <TextField
+          id="firstName"
+          name="firstName"
+          label=""
+          autoComplete="off"
+          variant="outlined"
+          sx={textFieldStyle}
+        />
+      </Grid>
+    </Grid>
   );
 }
-
-export const TestWrapper = styled.div`
-  .TestBtn {
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px);
-    border-radius: 11px;
-    color:#fff; 
-    :hover{
-        border: none; 
-    }
-  }
-`;
