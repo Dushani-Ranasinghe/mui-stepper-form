@@ -25,7 +25,7 @@ const textFieldStyle = {
     },
   },
   "& .MuiInputBase-root ": {
-    width: "30vw",
+    width: { sm: 270, md: 400, xs: 300 },
     height: "40px",
   },
   "& .MuiFormControl-root": {
@@ -92,6 +92,11 @@ const smallTextStyle = {
     },
   },
 };
+const gridStyle = {
+  display: "grid",
+  alignItems: "center",
+  justifyContent: "center",
+};
 export default function Test() {
   const [gender, setGender] = useState("");
 
@@ -107,8 +112,9 @@ export default function Test() {
       justifyContent="center"
       flexGrow={1}
       columns={12}
+      pt={10}
     >
-      <Grid item xs={12} sm={5}>
+      <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
         <InputLabel sx={inputstyle}>Pet Name</InputLabel>
         <TextField
           id="firstName"
@@ -120,7 +126,7 @@ export default function Test() {
           width="411px"
         />
       </Grid>
-      <Grid item xs={12} sm={5}>
+      <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
         <InputLabel sx={inputstyle}>Street Address</InputLabel>
         <TextField
           id="firstName"
@@ -131,7 +137,7 @@ export default function Test() {
           sx={textFieldStyle}
         />
       </Grid>
-      <Grid item xs={12} sm={5}>
+      <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
         <InputLabel sx={inputstyle}>Family Name</InputLabel>
         <TextField
           id="firstName"
@@ -142,7 +148,7 @@ export default function Test() {
           sx={textFieldStyle}
         />
       </Grid>
-      <Grid item xs={12} sm={5}>
+      <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
         <InputLabel sx={inputstyle}>AptCity</InputLabel>
         <TextField
           id="firstName"
@@ -153,7 +159,7 @@ export default function Test() {
           sx={textFieldStyle}
         />
       </Grid>
-      <Grid item xs={12} sm={5}>
+      <Grid item xs={12} sm={6} md={6} lg={6} xl={5}>
         <InputLabel sx={inputstyle}>Date of Birth</InputLabel>
         <TextField
           id="firstName"
@@ -165,7 +171,7 @@ export default function Test() {
           sx={inputDateStyle}
         />
       </Grid>
-      <Grid item xs={12} sm={5}>
+      <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
         <InputLabel sx={inputstyle}>State</InputLabel>
         <TextField
           id="firstName"
@@ -176,7 +182,7 @@ export default function Test() {
           sx={textFieldStyle}
         />
       </Grid>
-      <Grid item xs={12} sm={5}>
+      <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
         <InputLabel sx={inputstyle}>Breed</InputLabel>
         <TextField
           id="firstName"
@@ -187,7 +193,7 @@ export default function Test() {
           sx={textFieldStyle}
         />
       </Grid>
-      <Grid item xs={12} sm={5}>
+      <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
         <InputLabel sx={inputstyle}>Zip Code</InputLabel>
         <TextField
           id="firstName"
@@ -198,7 +204,7 @@ export default function Test() {
           sx={textFieldStyle}
         />
       </Grid>
-      <Grid item xs={8} sm={5} display={"flex"}>
+      <Grid item xs={12} sm={6} md={6} lg={6} xl={5} display={"flex"}>
         <Box mr={5}>
           <InputLabel sx={inputstyle} flexDirection={"row"}>
             Weight
@@ -257,7 +263,7 @@ export default function Test() {
           </Select>
         </Box>
       </Grid>
-      <Grid item xs={8} sm={5}>
+      <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
         <InputLabel sx={inputstyle}>Country</InputLabel>
         <TextField
           id="firstName"
@@ -269,7 +275,7 @@ export default function Test() {
         />
       </Grid>
 
-      <Grid item xs={8} sm={5} display={"flex"}>
+      <Grid item xs={12} sm={6} md={6} lg={6} xl={5} display={"flex"}>
         <Box mr={5}>
           <InputLabel sx={inputstyle} flexDirection={"row"}>
             Fur Color
@@ -296,7 +302,7 @@ export default function Test() {
         </Box>
       </Grid>
 
-      <Grid item xs={12} sm={5}>
+      <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
         <InputLabel sx={inputstyle}>Marks</InputLabel>
         <TextField
           id="firstName"
