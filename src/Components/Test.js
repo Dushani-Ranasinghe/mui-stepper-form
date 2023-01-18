@@ -52,7 +52,7 @@ const inputDateStyle = {
     background: "rgba(255, 255, 255, 0.2)",
   },
   "& .MuiInputBase-root ": {
-    width: "12vw",
+    width:{sm:150 , md:190, xs:160},
     height: "40px",
   },
   "& .MuiFormControl-root": {
@@ -78,7 +78,7 @@ const smallTextStyle = {
     background: "rgba(255, 255, 255, 0.2)",
   },
   "& .MuiInputBase-root ": {
-    width: "11vw",
+    width:{sm:110 , md:175, xs:130},
     height: "40px",
   },
   "& .MuiFormControl-root": {
@@ -103,7 +103,15 @@ export default function Test() {
   const handleChange = (event) => {
     setGender(event.target.value);
   };
-
+const DOBStyle ={
+  width: { sm: 270, md: 400, xs: 300 },
+}; 
+const smallFieldBoxStyle ={
+  width: { sm: 270, md: 400, xs: 300 },
+  display: "flex",
+  alignItems: "center",
+  justifyContent: {md: "ceneter", sm :"left"},
+}
   return (
     <Grid
       container
@@ -159,7 +167,8 @@ export default function Test() {
           sx={textFieldStyle}
         />
       </Grid>
-      <Grid item xs={12} sm={6} md={6} lg={6} xl={5}>
+      <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
+      <Box sx={DOBStyle}>
         <InputLabel sx={inputstyle}>Date of Birth</InputLabel>
         <TextField
           id="firstName"
@@ -170,6 +179,7 @@ export default function Test() {
           type="date"
           sx={inputDateStyle}
         />
+        </Box>
       </Grid>
       <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
         <InputLabel sx={inputstyle}>State</InputLabel>
@@ -204,7 +214,8 @@ export default function Test() {
           sx={textFieldStyle}
         />
       </Grid>
-      <Grid item xs={12} sm={6} md={6} lg={6} xl={5} display={"flex"}>
+      <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
+      <Box sx={smallFieldBoxStyle}>
         <Box mr={5}>
           <InputLabel sx={inputstyle} flexDirection={"row"}>
             Weight
@@ -228,7 +239,7 @@ export default function Test() {
             onChange={handleChange}
             displayEmpty
             sx={{
-              width: "11vw",
+              width:{sm:110 , md:175, xs:130},
               height: 50,
               "& .MuiOutlinedInput-notchedOutline": {
                 border: "2px solid rgba(255, 255, 255, 0.5)",
@@ -262,6 +273,7 @@ export default function Test() {
             <MenuItem value={2}>Female</MenuItem>
           </Select>
         </Box>
+        </Box>
       </Grid>
       <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
         <InputLabel sx={inputstyle}>Country</InputLabel>
@@ -275,7 +287,8 @@ export default function Test() {
         />
       </Grid>
 
-      <Grid item xs={12} sm={6} md={6} lg={6} xl={5} display={"flex"}>
+      <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
+      <Box sx={smallFieldBoxStyle}>
         <Box mr={5}>
           <InputLabel sx={inputstyle} flexDirection={"row"}>
             Fur Color
@@ -299,6 +312,7 @@ export default function Test() {
             variant="outlined"
             sx={smallTextStyle}
           />
+        </Box>
         </Box>
       </Grid>
 
