@@ -117,7 +117,7 @@ const smallFieldBoxStyle ={
   return (
     <Grid
       container
-      spacing={2}
+      spacing={1.5}
       alignItems="center"
       justifyContent="center"
       flexGrow={1}

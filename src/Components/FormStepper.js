@@ -37,9 +37,6 @@ const btnStyle = {
   fontSize: "13px",
 };
 
-const boxStyle = {
-  justifyContent: { md: "left", sm: "center" },
-};
 export default function FormStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
 
@@ -73,6 +70,7 @@ export default function FormStepper() {
             Pet Information
           </Typography>
         </Box>
+        {activeStep === 1 && (
         <Box display={"flex"}>
           <EditOutlinedIcon
             sx={{
@@ -95,7 +93,7 @@ export default function FormStepper() {
               background: "rgba(255, 255, 255, 0.2)",
             }}
           />
-        </Box>
+        </Box> )}
       </Box>
 
       <Box>
