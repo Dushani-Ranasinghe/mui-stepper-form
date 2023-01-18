@@ -3,8 +3,8 @@ import { Select, InputLabel, MenuItem, Box } from "@mui/material";
 import React, { useState } from "react";
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
-import SaveOutlinedIcon from '@mui/icons-material/SaveOutlined';
-import LocalPrintshopOutlinedIcon from '@mui/icons-material/LocalPrintshopOutlined';
+import SaveOutlinedIcon from "@mui/icons-material/SaveOutlined";
+import LocalPrintshopOutlinedIcon from "@mui/icons-material/LocalPrintshopOutlined";
 
 const inputstyle = {
   color: "white",
@@ -101,45 +101,45 @@ const gridStyle = {
   justifyContent: "center",
 };
 const DOBStyle = {
-    width: { sm: 270, md: 400, xs: 300 },
-  };
-  const smallFieldBoxStyle = {
-    width: { sm: 270, md: 400, xs: 300 },
-    display: "flex",
-    alignItems: "center",
-    justifyContent: { md: "ceneter", sm: "left" },
-  };
+  width: { sm: 270, md: 400, xs: 300 },
+};
+const smallFieldBoxStyle = {
+  width: { sm: 270, md: 400, xs: 300 },
+  display: "flex",
+  alignItems: "center",
+  justifyContent: { md: "ceneter", sm: "left" },
+};
 
-  const btnStyle = {
-    color: "white",
-    background: "rgba(255, 255, 255, 0.2)",
-    border: "2px solid rgba(255, 255, 255, 0.5)",
-    boxshadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
-    borderRadius: "11px",
-    width: 100,
-    fontFamily: "Omnes",
-    fontStyle: "normal",
-    textTransform: "none",
-    fontSize: "13px",
-    height: 40,
-    "& .MuiButton-startIcon":{
-        margin:"0px"
-    }
-  };
+const btnStyle = {
+  color: "white",
+  background: "rgba(255, 255, 255, 0.2)",
+  border: "2px solid rgba(255, 255, 255, 0.5)",
+  boxshadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
+  borderRadius: "11px",
+  width: 100,
+  fontFamily: "Omnes",
+  fontStyle: "normal",
+  textTransform: "none",
+  fontSize: "13px",
+  height: 40,
+  "& .MuiButton-startIcon": {
+    margin: "0px",
+  },
+};
 
-  const previewBtnStyle ={
-    color: "white",
-    background: "rgba(255, 255, 255, 0.2)",
-    border: "2px solid rgba(255, 255, 255, 0.5)",
-    boxshadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
-    borderRadius: "25px",
-    width: 100,
-    fontFamily: "Omnes",
-    fontStyle: "normal",
-    textTransform: "none",
-    fontSize: "13px",
-    height: 40,
-  }
+const previewBtnStyle = {
+  color: "white",
+  background: "rgba(255, 255, 255, 0.2)",
+  border: "2px solid rgba(255, 255, 255, 0.5)",
+  boxshadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
+  borderRadius: "25px",
+  width: 100,
+  fontFamily: "Omnes",
+  fontStyle: "normal",
+  textTransform: "none",
+  fontSize: "13px",
+  height: 40,
+};
 
 export default function PreviewPage() {
   const [gender, setGender] = useState("");
@@ -147,9 +147,9 @@ export default function PreviewPage() {
   const handleChange = (event) => {
     setGender(event.target.value);
   };
- 
+
   return (
-    <Container sx={{ paddingTop: "40px" }}>
+    <div>
       <Grid
         container
         spacing={2}
@@ -157,6 +157,7 @@ export default function PreviewPage() {
         justifyContent="center"
         flexGrow={1}
         columns={12}
+        pt={3}
       >
         <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
           <Box sx={smallFieldBoxStyle}>
@@ -371,14 +372,20 @@ export default function PreviewPage() {
         </Grid>
       </Grid>
       <Box display="flex" alignItems="center" justifyContent="center" p={5}>
-        <Box>
-          <Button variant="outlined" sx={btnStyle} startIcon={<SaveOutlinedIcon/>}>
-          </Button>
+        <Box display="flex">
+          <Button
+            variant="outlined"
+            sx={btnStyle}
+            startIcon={<SaveOutlinedIcon />}
+          ></Button>
 
-          <Button variant="outlined" sx={btnStyle} startIcon={<LocalPrintshopOutlinedIcon/>}>
-          </Button>
+          <Button
+            variant="outlined"
+            sx={btnStyle}
+            startIcon={<LocalPrintshopOutlinedIcon />}
+          ></Button>
         </Box>
       </Box>
-    </Container>
+    </div>
   );
 }

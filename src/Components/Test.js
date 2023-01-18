@@ -122,7 +122,7 @@ const smallFieldBoxStyle ={
       justifyContent="center"
       flexGrow={1}
       columns={12}
-      pt={10}
+      pt={3.5}
     >
       <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
         <InputLabel sx={inputstyle}>Pet Name</InputLabel>

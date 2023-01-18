@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
-import PaymentForm from "./PaymentForm";
 import { Box, Button, Container, Typography } from "@mui/material";
 import Test from "./Test";
 import ArrowBackIosNewRoundedIcon from "@mui/icons-material/ArrowBackIosNewRounded";
 import PreviewPage from "./PreviewPage";
+
+import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
+import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 
 const steps = ["step 01", "Step 02"];
 
@@ -35,6 +37,9 @@ const btnStyle = {
   fontSize: "13px",
 };
 
+const boxStyle = {
+  justifyContent: { md: "left", sm: "center" },
+};
 export default function FormStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
 
@@ -47,32 +52,52 @@ export default function FormStepper() {
   };
 
   return (
-    <Container>
-      <Box
-        display={"flex"}
-        alignItems="center"
-        justifyContent="left"
-        position="absolute"
-        width={900}
-      >
-        <ArrowBackIosNewRoundedIcon
-          sx={{ color: "white", cursor: "pointer" }}
-          onClick={() => handleBack()}
-        />
-        <Typography
-          variant="h6"
-          color="white"
-          sx={{
-            fontFamily: "Omnes",
-            fontStyle: "normal",
-            fontWeight: 500,
-            fontSize: "20px",
-            lineHeight: "23px",
-          }}
-        >
-          Pet Information
-        </Typography>
+    <Container sx={{ padding: "0px" }}>
+      <Box display={"flex"} justifyContent="space-between" px={15}>
+        <Box display={"flex"} alignItems="center" justifyContent="left">
+          <ArrowBackIosNewRoundedIcon
+            sx={{ color: "white", cursor: "pointer" }}
+            onClick={() => handleBack()}
+          />
+          <Typography
+            variant="h6"
+            color="white"
+            sx={{
+              fontFamily: "Omnes",
+              fontStyle: "normal",
+              fontWeight: 500,
+              fontSize: "20px",
+              lineHeight: "23px",
+            }}
+          >
+            Pet Information
+          </Typography>
+        </Box>
+        <Box display={"flex"}>
+          <EditOutlinedIcon
+            sx={{
+              color: "white",
+              cursor: "pointer",
+              marginRight: 1,
+              border: "2px solid rgba(255, 255, 255, 0.5)",
+              borderRadius: "5px",
+              boxshadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
+              background: "rgba(255, 255, 255, 0.2)",
+            }}
+          />
+          <ShareOutlinedIcon
+            sx={{
+              color: "white",
+              cursor: "pointer",
+              border: "2px solid rgba(255, 255, 255, 0.5)",
+              borderRadius: "5px",
+              boxshadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
+              background: "rgba(255, 255, 255, 0.2)",
+            }}
+          />
+        </Box>
       </Box>
+
       <Box>
         {activeStep === steps.length ? (
           <React.Fragment>
@@ -85,14 +110,13 @@ export default function FormStepper() {
           </React.Fragment>
         )}
       </Box>
-      <Box display="flex" alignItems="center" justifyContent="center" p={5}>
-        <Box>
-          {activeStep === 0 && (
+      {activeStep === 0 && (
+        <Box display="flex" alignItems="center" justifyContent="center" p={5}>
+          <Box display="flex">
             <Button variant="outlined" sx={btnStyle} type="submit">
               Submit
             </Button>
-          )}
-          {activeStep === 0 && (
+
             <Button
               variant="outlined"
               sx={btnStyle}
@@ -100,9 +124,9 @@ export default function FormStepper() {
             >
               Next
             </Button>
-          )}
+          </Box>
         </Box>
-      </Box>
+      )}
       <Stepper sx={{ width: "400px", margin: "auto" }} activeStep={activeStep}>
         {steps.map((label) => (
           <Step key={label}>
