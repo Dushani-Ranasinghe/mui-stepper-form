@@ -125,8 +125,8 @@ const smallFieldBoxStyle ={
       <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
         <InputLabel sx={inputstyle}>Pet Name</InputLabel>
         <TextField
-          id="firstName"
-          name="firstName"
+          id="petName"
+          name="petName"
           label=""
           autoComplete="off"
           variant="outlined"
@@ -137,8 +137,8 @@ const smallFieldBoxStyle ={
       <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
         <InputLabel sx={inputstyle}>Street Address</InputLabel>
         <TextField
-          id="firstName"
-          name="firstName"
+          id="streetAddress"
+          name="streetAddress"
           label=""
           autoComplete="off"
           variant="outlined"
@@ -148,8 +148,8 @@ const smallFieldBoxStyle ={
       <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
         <InputLabel sx={inputstyle}>Family Name</InputLabel>
         <TextField
-          id="firstName"
-          name="firstName"
+          id="familyName"
+          name="familyName"
           label=""
           autoComplete="off"
           variant="outlined"
@@ -159,8 +159,8 @@ const smallFieldBoxStyle ={
       <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
         <InputLabel sx={inputstyle}>AptCity</InputLabel>
         <TextField
-          id="firstName"
-          name="firstName"
+          id="aptCity"
+          name="aptCity"
           label=""
           autoComplete="off"
           variant="outlined"
@@ -171,8 +171,8 @@ const smallFieldBoxStyle ={
       <Box sx={DOBStyle}>
         <InputLabel sx={inputstyle}>Date of Birth</InputLabel>
         <TextField
-          id="firstName"
-          name="firstName"
+          id="DOB"
+          name="DOB"
           label=""
           autoComplete="off"
           variant="outlined"
@@ -184,8 +184,8 @@ const smallFieldBoxStyle ={
       <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
         <InputLabel sx={inputstyle}>State</InputLabel>
         <TextField
-          id="firstName"
-          name="firstName"
+          id="state"
+          name="state"
           label=""
           autoComplete="off"
           variant="outlined"
@@ -195,8 +195,8 @@ const smallFieldBoxStyle ={
       <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
         <InputLabel sx={inputstyle}>Breed</InputLabel>
         <TextField
-          id="firstName"
-          name="firstName"
+          id="breed"
+          name="breed"
           label=""
           autoComplete="off"
           variant="outlined"
@@ -206,8 +206,8 @@ const smallFieldBoxStyle ={
       <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
         <InputLabel sx={inputstyle}>Zip Code</InputLabel>
         <TextField
-          id="firstName"
-          name="firstName"
+          id="zipCode"
+          name="zipCode"
           label=""
           autoComplete="off"
           variant="outlined"
@@ -221,8 +221,8 @@ const smallFieldBoxStyle ={
             Weight
           </InputLabel>
           <TextField
-            id="firstName"
-            name="firstName"
+            id="weight"
+            name="weight"
             label=""
             autoComplete="off"
             variant="outlined"
@@ -278,8 +278,8 @@ const smallFieldBoxStyle ={
       <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
         <InputLabel sx={inputstyle}>Country</InputLabel>
         <TextField
-          id="firstName"
-          name="firstName"
+          id="country"
+          name="country"
           label=""
           autoComplete="off"
           variant="outlined"
@@ -294,8 +294,8 @@ const smallFieldBoxStyle ={
             Fur Color
           </InputLabel>
           <TextField
-            id="firstName"
-            name="firstName"
+            id="furColor"
+            name="furColor"
             label=""
             autoComplete="off"
             variant="outlined"
@@ -305,8 +305,8 @@ const smallFieldBoxStyle ={
         <Box>
           <InputLabel sx={inputstyle}>Eye Color</InputLabel>
           <TextField
-            id="firstName"
-            name="firstName"
+            id="eyeColor"
+            name="eyeColor"
             label=""
             autoComplete="off"
             variant="outlined"
@@ -319,8 +319,8 @@ const smallFieldBoxStyle ={
       <Grid item xs={12} sm={6} md={6} lg={6} xl={5} sx={gridStyle}>
         <InputLabel sx={inputstyle}>Marks</InputLabel>
         <TextField
-          id="firstName"
-          name="firstName"
+          id="marks"
+          name="marks"
           label=""
           autoComplete="off"
           variant="outlined"
