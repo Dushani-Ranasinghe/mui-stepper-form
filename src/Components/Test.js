@@ -2,6 +2,7 @@ import { Select, InputLabel, MenuItem, Box } from "@mui/material";
 import React, { useState } from "react";
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
+import FormHeader from "./FormHeader";
 
 const inputstyle = {
   color: "white",
@@ -97,6 +98,7 @@ const gridStyle = {
   alignItems: "center",
   justifyContent: "center",
 };
+
 export default function Test() {
   const [gender, setGender] = useState("");
 
